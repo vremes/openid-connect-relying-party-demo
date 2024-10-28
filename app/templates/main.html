@@ -8,9 +8,24 @@
         <div class="col">OpenID Connect Relying Party Demo</div>
     </div>
     {% if user %}
-    <div class="row mt-3">
-        <div class="col">
-            <p>You are logged in as <code>{{ user.email }}</code></p>
+    <div class="row mt-3 justify-content-center">
+        <div class="col-sm-6">
+            <div>
+                <p>User ID:</p>
+                <input type="text" class="form-control" value="{{ user.profile.get('sub') }}" readonly>
+            </div>
+            <div class="mt-3">
+                <p>Access token:</p>
+                <input type="text" class="form-control" value="{{ user.access_token }}" readonly>
+            </div>
+            <div class="mt-3">
+                <p>Refresh token:</p>
+                <input type="text" class="form-control" value="{{ user.refresh_token }}" readonly>
+            </div>
+            <div class="mt-3">
+                <p>Profile:</p>
+                <input type="text" class="form-control" value="{{ user.profile }}" readonly>
+            </div>
         </div>
     </div>
     <div class="row mt-3">
