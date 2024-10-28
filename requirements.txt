@@ -1,0 +1,3 @@
+Flask==3.0.3
+flask_oidc==2.2.2
+python-dotenv==1.0.1
